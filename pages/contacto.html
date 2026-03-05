@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--- GOOGLE FONTS --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     
+    <!--- BOOTSTRAP CSS --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!--- MI CSS --->
+    <!-- link rel="stylesheet" href="./css/estilos.css"---> 
+    <link rel="stylesheet" href="../css/main.css">
+    <title> Contacto | Magenta </title>    
+   
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    
+</head>
+<!-- forzar deploy -->
+
+
+<body> <!-- apertura -->
+    
+    <header id="fondoHeader" class="fixed-top">
+         <nav class="navbar navbar-expand-lg">
+             <div class="container-fluid">
+
+            <!-- CONTENEDOR FLEXIBLE LOGO/ICONOS -->
+                 <div class="d-flex align-items-center justify-content-between w-100" >
+                 <!-- LOGO -->
+                     <a class="navbar-brand" href="../index.html">
+                         <img src="../assets/img/1Recurso 2@10x.png" alt="Logo Magenta" class="logo">
+                     </a>
+
+                     <!-- LIKS MENÚ (SE COLAPSA EN MOVIL)-->
+                     <div class="collapse navbar-collapse" id="menuMagenta">
+                         <ul class="navbar-nav mx-auto">
+                             <li class="nav-item">
+                                 <a class="nav-link" href="../index.html">Inicio</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="./nuevo.html">¡Nuevo!</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="./agendasplanificadores.html">Agendas & Planificadores</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="./cuadernoslibretas.html">Cuadernos & Libretas</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="./escritoriopapeleria.html">Escritorio & Papelería</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="./contacto.html">Contacto</a>
+                             </li>
+                         </ul>
+                     </div>
+
+                     <!-- ICONOS + BOTON HAMBUGUESA-->
+                     <div class=" d-flex align-items-center">
+
+                         <!-- ICONOS -->
+                         <div class ="iconosHeader d-flex align-items-center">
+                             <a href="#" class="me-3"> 
+                                 <img src="../assets/img/fi-rr-search.png" alt="buscar" class="icono-png"> 
+                             </a>
+                             <a href="./carrito.html" class="me-3"> 
+                                 <img src="../assets/img/fi-rr-shopping-cart (1).png" alt="carrito" class="icono-png">
+                             </a>
+                             <a href="#"> 
+                                 <img src="../assets/img/fi-rr-user.png" alt="user" class="icono-png">
+                             </a>
+                         </div>
+
+            
+        
+                         <!-- BOTÓN HAMBURGUESA -->
+                         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#menuMagenta"
+                             aria-controls="menuMagenta" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon"></span>
+                         </button>
+                     </div>
+                </div>
+            </div>
+        </nav>
+</header>
+
+    <main class="mainContent">
+        <section class="contactSection">
+            <div class="container contactGrid">
+                <!-- Columna izquierda: Texto -->
+                <div class="contactInfo">
+                    <h1 class="tituloContact">Contáctanos</h1>
+                    <p class="descripcionContact">
+                        Para contactarnos, por favor completa el siguiente formulario:
+                    </p>
+                </div>
+
+                <!-- Columna derecha: Formulario -->
+                <form action="#" method="post" class="contactForm">
+                    <div class="formGroup">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btnEnviar">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<!--- PIE DE PAGINA ---> 
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Columna 1: Logo y descripción -->
+        <div class="footer-col">
+            <h2 class="footer-logo">magenta</h2>
+            <p class="footer-description">
+                Nuestra misión es transformar la manera en que las personas se relacionan con la organización y la creatividad en su día a día. Creemos que la papelería no solo debe ayudarte a planificar y mantener el orden, sino también inspirarte y reflejar tu estilo y personalidad únicos.
+            </p>
+            <div class="footer-email">
+                <i class="far fa-envelope"></i>
+                <a href="mailto:support@mchose.store">support@magenta.store</a>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Compañía -->
+        <div class="footer-col">
+            <h3 class="footer-title">Compañía</h3>
+            <ul class="footer-links">
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="#">Dónde comprar</a></li>
+                <li><a href="#">Únase a MAGENTA</a></li>
+                <li><a href="#">Afiliados</a></li>
+                <li><a href="#">Conviértete en distribuidor</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Apoyo -->
+        <div class="footer-col">
+            <h3 class="footer-title">Apoyo</h3>
+            <ul class="footer-links">
+                <li><a href="#">CENTRO MAGENTA</a></li>
+                <li><a href="#">Manual de usuario</a></li>
+                <li><a href="#">Seguimiento de pedidos</a></li>
+                <li><a href="#">política de privacidad</a></li>
+                <li><a href="#">Política de devoluciones</a></li>
+                <li><a href="#">Política de envíos</a></li>
+                <li><a href="#">Condiciones de servicio</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4: Newsletter -->
+        <div class="footer-col">
+            <h3 class="footer-title">Registrate para recibir nuevas historias y ofertas personales.</h3>
+            <p class="newsletter-text">¿Quieres tener ese momento creativo?</p>
+            
+            <form class="newsletter-form">
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Correo electrónico">
+                    <button type="submit">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</footer>
+
+
+<!--- BOOTSTRAP CSS --->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body> <!-- Cierre -->
+
+</html>
