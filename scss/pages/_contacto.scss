@@ -9,26 +9,26 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-.mainContent {
+.contact-main {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 40px 20px;
     display: grid;
-    place-items: start;   
-}
-
-.contactSection {
-    width: 100%;
-    max-width: 1200px;
-    padding: 40px;
+    place-items: start;
 }
 
 /* Grid principal */
 .contactGrid {
     display: grid;
     gap: 40px;
+}
+
+.contact-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: variables.$color-primario;
+    font-family: variables.$fuente-titulos;
 }
 
 /* Mobile First (por defecto: vertical) */
