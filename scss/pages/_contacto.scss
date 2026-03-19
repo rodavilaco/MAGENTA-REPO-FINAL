@@ -4,29 +4,41 @@
 
 
 /* Estilos base y reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .contact-main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
-    display: grid;
-    place-items: start;
+    
+    .contact-container {
+        width: 100%;
+    }
+    
+    .indicadorPage {
+        font-family: variables.$fuente-principal;
+        font-size: 14px;
+        color: variables.$color-primario;
+        margin: 90px 0 20px;
+    }
 }
 
 /* Grid principal */
 .contactGrid {
     display: grid;
     gap: 40px;
+    padding: 0;
 }
 
 .contact-title {
-    font-size: 34px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 40px 0 40px;
     color: variables.$color-primario;
     font-family: variables.$fuente-titulos;
 }
@@ -41,22 +53,18 @@
     font-family: variables.$fuente-titulos;
 }
 
-.tituloContact {
-    font-size: 34px;
-    color: variables.$color-primario;
-    margin-bottom: 15px;
-}
-
 .descripcionContact {
     color: variables.$color-texto-secundario;
     font-family: variables.$fuente-principal;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Estilos del formulario */
 .contactForm {
     display: grid;
     gap: 20px;
+    width: 100%;
 }
 
 .formGroup {
@@ -65,7 +73,7 @@
 }
 
 .formGroup label {
-    font-weight: medium;
+    font-weight: 500; /* medium no es válido, usar 500 */
     font-family: variables.$fuente-principal;
     color: variables.$color-texto-desactivado;
     font-size: 0.95rem;
@@ -76,15 +84,21 @@
     width: 100%;
     padding: 12px;
     border: 1.8px solid #e0e0e0;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    font-family: variables.$fuente-principal;
+    transition: border-color 0.3s ease;
+    
+    &::placeholder {
+        color: #aaa;
+    }
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
     outline: none;
     border-color: variables.$color-primario;
+    box-shadow: 0 0 0 3px rgba(variables.$color-primario, 0.1);
 }
 
 .btnEnviar {
@@ -96,17 +110,25 @@
     font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     justify-self: start;
-}
-
-.btnEnviar:hover {
-    background-color: variables.$color-primario-hover;
+    width: auto;
+    min-width: 200px;
+    
+    &:hover {
+        background-color: variables.$color-primario-hover;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(variables.$color-primario, 0.3);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
 }
 
 /* Tablet (a partir de 768px) */
 @media screen and (min-width: 768px) {
-    .contactSection {
+    .contact-main {
         padding: 50px;
     }
 
@@ -122,8 +144,9 @@
         align-self: start;
     }
 
-    .tituloContact {
+    .contact-title {
         font-size: 2.2rem;
+        margin-top: 0; /* Ajuste para alinear con el formulario */
     }
 
     .btnEnviar {
@@ -133,7 +156,7 @@
 
 /* Desktop (a partir de 1024px) */
 @media screen and (min-width: 1024px) {
-    .contactSection {
+    .contact-main {
         padding: 60px;
     }
 
@@ -142,7 +165,7 @@
         gap: 70px;
     }
 
-    .tituloContact {
+    .contact-title {
         font-size: 2.5rem;
     }
 
@@ -158,8 +181,9 @@
 
 /* Pantallas grandes (a partir de 1440px) */
 @media screen and (min-width: 1440px) {
-    .contactSection {
+    .contact-main {
         max-width: 1400px;
+        margin: 0 auto;
         padding: 80px;
     }
 
@@ -167,4 +191,10 @@
         grid-template-columns: 1fr 1.8fr;
         gap: 100px;
     }
+}
+
+/* Opcional: Estilo para cuando el formulario se envía correctamente */
+.contactForm.submitted {
+    opacity: 0.7;
+    pointer-events: none;
 }
