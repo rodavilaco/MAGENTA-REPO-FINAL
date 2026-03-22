@@ -23,8 +23,8 @@
     .indicadorPage {
         font-family: variables.$fuente-principal;
         font-size: 14px;
-        color: variables.$color-primario;
-        margin: 90px 0 20px;
+        font-weight: 400;
+        color: variables.$color-primario;  
     }
 }
 
@@ -38,7 +38,7 @@
 .contact-title {
     font-size: 48px;
     font-weight: 600;
-    margin: 40px 0 40px;
+    margin: 50px 0 40px;
     color: variables.$color-primario;
     font-family: variables.$fuente-titulos;
 }
